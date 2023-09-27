@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleAspectFit" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="178" id="KGk-i7-Jjw" customClass="OpinionCell" customModule="eggTimer2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="178"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="178"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" id="Alz-er-2qW">
+                        <rect key="frame" x="0.0" y="0.0" width="395" height="178"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qx8-M8-zK0">
+                                <rect key="frame" x="9" y="37" width="252" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="filled_star" translatesAutoresizingMaskIntoConstraints="NO" id="jOD-S6-CAP">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="hfg-FB-oXD"/>
+                                            <constraint firstAttribute="width" constant="44" id="pia-er-yJx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled_star" translatesAutoresizingMaskIntoConstraints="NO" id="ITB-am-sGI">
+                                        <rect key="frame" x="52" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Dqd-9I-oEA"/>
+                                            <constraint firstAttribute="height" constant="44" id="ySX-XI-Dbz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled_star" translatesAutoresizingMaskIntoConstraints="NO" id="E8o-wV-W8X">
+                                        <rect key="frame" x="104" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4Xk-DB-OjZ"/>
+                                            <constraint firstAttribute="width" constant="44" id="zWc-Ya-h7J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled_star" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-Hb-OCs">
+                                        <rect key="frame" x="156" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="N4G-nv-WJx"/>
+                                            <constraint firstAttribute="height" constant="44" id="Rif-pP-hpq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filled_star" translatesAutoresizingMaskIntoConstraints="NO" id="K5h-JB-A3m">
+                                        <rect key="frame" x="208" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="DZK-yj-ntL"/>
+                                            <constraint firstAttribute="height" constant="44" id="tsf-7b-fik"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xb8-gh-8UL">
+                                <rect key="frame" x="9" y="0.0" width="337" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" id="69c-WQ-qZ8">
+                                <rect key="frame" x="9" y="96" width="337" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <attributedString key="attributedText">
+                                    <fragment content="opinionLabel">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qx8-M8-zK0" firstAttribute="top" secondItem="Alz-er-2qW" secondAttribute="top" constant="37" id="AdP-vO-r3L"/>
+                            <constraint firstItem="qx8-M8-zK0" firstAttribute="leading" secondItem="Alz-er-2qW" secondAttribute="leading" constant="9" id="r28-Go-aqT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="Xb8-gh-8UL" id="jHk-7t-dkw"/>
+                <outlet property="opinionLabel" destination="69c-WQ-qZ8" id="svb-lF-xiA"/>
+                <outlet property="star1" destination="jOD-S6-CAP" id="Wc0-4A-F4h"/>
+                <outlet property="star2" destination="ITB-am-sGI" id="0ba-HK-WbE"/>
+                <outlet property="star3" destination="E8o-wV-W8X" id="Fkj-4P-EKl"/>
+                <outlet property="star4" destination="Eyr-Hb-OCs" id="8Xv-Ll-HIE"/>
+                <outlet property="star5" destination="K5h-JB-A3m" id="bIC-aT-MF9"/>
+            </connections>
+            <point key="canvasLocation" x="241.22137404580153" y="57.04225352112676"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="filled_star" width="43.333332061767578" height="43.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

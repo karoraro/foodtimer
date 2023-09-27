@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zNV-dG-3IP">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UUk-d0-Hlw">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="zNV-dG-3IP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Quk-OK-Bjw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQa-gP-Zt8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="s8h-fd-apz" kind="relationship" relationship="rootViewController" id="U1S-Eb-tmp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qOB-MG-e4T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="42"/>
+        </scene>
+        <!--WelcomeView-->
+        <scene sceneID="vTE-4u-6DA">
+            <objects>
+                <viewController title="WelcomeView" id="s8h-fd-apz" customClass="WelcomeController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aNw-Ts-WjW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="voN-vZ-Gn7">
+                                <rect key="frame" x="0.0" y="325" width="393" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nFT-47-fLY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Twa-R9-6Qe"/>
+                    <connections>
+                        <segue destination="Jqf-LQ-dLq" kind="show" identifier="goToMenu" id="iPE-af-I3q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9I-D2-Ik4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.52671755725191" y="41.549295774647888"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="RYf-YB-rf6">
+            <objects>
+                <viewController title="Menu" modalTransitionStyle="crossDissolve" id="rjm-Pf-Wok" customClass="MenuController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="xrP-l1-xRE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qRT-Ew-Nob">
+                                <rect key="frame" x="48" y="185" width="297" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Eggs">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.59340688340000003" green="0.65961465370000005" blue="0.51736697639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="eggsButtonPressed:" destination="rjm-Pf-Wok" eventType="touchUpInside" id="97Z-j5-E6F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3vE-Ap-gHB">
+                                <rect key="frame" x="106" y="71" width="180" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ir0-Sb-NX4">
+                                <rect key="frame" x="48" y="265" width="297" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pizza">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.59340688340000003" green="0.65961465370000005" blue="0.51736697639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pizzaButtonPressed:" destination="rjm-Pf-Wok" eventType="touchUpInside" id="bw6-RR-Bdf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="29q-J5-F3M">
+                                <rect key="frame" x="39" y="445" width="311" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="PIo-wx-b6K">
+                                <rect key="frame" x="48" y="345" width="297" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Custom">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                    <color key="baseBackgroundColor" red="0.59340688340000003" green="0.65961465370000005" blue="0.51736697639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="customButtonPressed:" destination="rjm-Pf-Wok" eventType="touchUpInside" id="vbK-Xz-5u3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1KO-ZF-1Xw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Main Menu" image="house.fill" catalog="system" id="Myt-cr-6dU"/>
+                    <navigationItem key="navigationItem" id="w6Q-bF-Gv2"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToEgg" id="HSP-BC-etR"/>
+                        <segue destination="h0d-aI-j6b" kind="show" identifier="goToPizza" id="oor-9r-5Wx"/>
+                        <segue destination="0Eh-8S-cRB" kind="show" identifier="goToCustom" id="1dA-oq-yZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMM-Sj-Ojk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719.84732824427476" y="790.84507042253529"/>
+        </scene>
+        <!--Egg Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Egg Controller" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="EggController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="3" continuous="NO" id="6er-vh-FQw">
+                                <rect key="frame" x="40" y="501" width="311" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pnd-9w-dvy"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="I8d-zN-a9p">
+                                <rect key="frame" x="42" y="697" width="308" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemBrownColor"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="fcj-Nz-c5N">
+                                <rect key="frame" x="111" y="553" width="170" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Medium">
+                                        <attributes>
+                                            <font key="NSFont" size="25" name="Helvetica-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="sKR-yf-0VU">
+                                <rect key="frame" x="111" y="613" width="170" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Start Timer" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.21309385826839278" green="0.18023398319982351" blue="0.13641734945355066" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.61170504673716963" green="0.69566114266830448" blue="0.82290358040201006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rso-kY-cr5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egg Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" id="UvR-B7-4N0">
+                                <rect key="frame" x="68" y="109" width="256" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="wA0-GS-zvX">
+                                <rect key="frame" x="42" y="722" width="308" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg" id="YFT-FM-oTe">
+                                <rect key="frame" x="51" y="207" width="290" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FOOD TIMER" id="InX-9C-65S"/>
+                    <connections>
+                        <outlet property="buttonLabel" destination="sKR-yf-0VU" id="yId-DJ-WPm"/>
+                        <outlet property="hardnessLabel" destination="fcj-Nz-c5N" id="q8e-nm-1H5"/>
+                        <outlet property="progressBar" destination="I8d-zN-a9p" id="4Jm-DR-kUj"/>
+                        <outlet property="slider" destination="6er-vh-FQw" id="oDv-5l-01j"/>
+                        <outlet property="timeLabel" destination="wA0-GS-zvX" id="7Ub-MU-ucS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="1551"/>
+        </scene>
+        <!--Pizza Controller-->
+        <scene sceneID="7Fh-T5-s6X">
+            <objects>
+                <viewController title="Pizza Controller" id="h0d-aI-j6b" customClass="PizzaController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XiN-wU-vPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" id="yMn-cd-0tc">
+                                <rect key="frame" x="68" y="123" width="256" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" id="2sg-6G-JQa">
+                                <rect key="frame" x="51" y="208" width="290" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch toolTip="Switch to select" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="xV1-5a-IV1">
+                                <rect key="frame" x="173" y="516" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchStateChanged:" destination="h0d-aI-j6b" eventType="valueChanged" id="kSo-Oo-Thp"/>
+                                </connections>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piekarnik_zwykly" id="pMb-hy-h8z">
+                                <rect key="frame" x="68" y="489" width="58" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piekarnik_termoobieg" id="UHd-KO-V0T">
+                                <rect key="frame" x="265" y="500" width="58" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="fpQ-kH-2UD">
+                                <rect key="frame" x="42" y="756" width="308" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemBrownColor"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time[min] : 15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="6Zb-va-aL4">
+                                <rect key="frame" x="68" y="592" width="256" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Rw7-Dz-fvz">
+                                <rect key="frame" x="112" y="673" width="169" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Start Timer" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.21309385829999999" green="0.1802339832" blue="0.13641734950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.61170504670000003" green="0.69566114270000001" blue="0.8229035804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="timerButtonPressed:" destination="h0d-aI-j6b" eventType="touchUpInside" id="7cS-I4-PmT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nd7-NJ-aTq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FOOD TIMER" id="3AZ-B1-7Pq"/>
+                    <connections>
+                        <outlet property="progressBar" destination="fpQ-kH-2UD" id="rva-l1-b29"/>
+                        <outlet property="switchButton" destination="xV1-5a-IV1" id="bXy-9k-NDX"/>
+                        <outlet property="timeLabel" destination="6Zb-va-aL4" id="aW1-JT-CNs"/>
+                        <outlet property="timerButton" destination="Rw7-Dz-fvz" id="Aoj-8G-Qzy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0iR-tb-HFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="1551"/>
+        </scene>
+        <!--Custom Controller-->
+        <scene sceneID="Wwe-RK-wuT">
+            <objects>
+                <viewController title="Custom Controller" id="0Eh-8S-cRB" customClass="CustomController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h46-9s-6YA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" id="WwT-Mh-wR7">
+                                <rect key="frame" x="68" y="123" width="256" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYF-De-wUT">
+                                <rect key="frame" x="68" y="253" width="256" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="40" id="XUb-OM-n49">
+                                <rect key="frame" x="91" y="234" width="211" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="FsV-Z3-fB3">
+                                        <rect key="frame" x="0.0" y="0.33333333333333393" width="43.666666666666664" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="mxb-VO-BOs">
+                                        <rect key="frame" x="83.666666666666671" y="0.33333333333333393" width="43.666666666666671" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="iqV-DG-yft">
+                                        <rect key="frame" x="167.33333333333334" y="0.33333333333333393" width="43.666666666666657" height="24.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" id="blL-Fl-D4U">
+                                <rect key="frame" x="239" y="389" width="84" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.3448028783" green="0.66291986039999995" blue="0.3572489056" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="0Eh-8S-cRB" eventType="touchUpInside" id="XPT-rh-gNz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="me3-32-vxX">
+                                <rect key="frame" x="91" y="388" width="84" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.40663517840000002" green="0.40731342230000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="0Eh-8S-cRB" eventType="touchUpInside" id="HKt-QS-Rjr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tost" id="Aes-jy-ngs">
+                                <rect key="frame" x="45" y="440" width="300" height="342"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Sj-Mg-h50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FOOD TIMER" id="tnG-hl-P5H"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="me3-32-vxX" id="dqN-oi-J2h"/>
+                        <outlet property="startButton" destination="blL-Fl-D4U" id="xJI-fK-mI7"/>
+                        <outlet property="timePicker" destination="BYF-De-wUT" id="8dY-T9-bad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiL-hQ-omT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490.8396946564885" y="1550.7042253521126"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xtN-x9-bXV">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Jqf-LQ-dLq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Myi-os-cUK"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iC2-zP-ti0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.94608434929999996" green="0.91172029629999995" blue="0.77408079320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.48993645606669056" green="0.53365345546348608" blue="0.43243476383817991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" cyan="0.15011049530000001" magenta="0.049123519179999998" yellow="0.49678242210000001" black="0.01264054794" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.40557850364627651" green="0.44176824821356786" blue="0.35797753416872952" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rjm-Pf-Wok" kind="relationship" relationship="viewControllers" id="aA9-rj-b7R"/>
+                        <segue destination="gp1-zc-gDL" kind="relationship" relationship="viewControllers" id="0aP-l2-Xvr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJF-hL-qrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103.0534351145038" y="41.549295774647888"/>
+        </scene>
+        <!--Questionnaire-->
+        <scene sceneID="WmH-52-pcj">
+            <objects>
+                <viewController title="Questionnaire" modalTransitionStyle="crossDissolve" id="gp1-zc-gDL" customClass="QuestionnaireController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8D5-TR-cHc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_q" id="u9E-sl-VaL">
+                                <rect key="frame" x="0.0" y="127" width="393" height="642"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionnaire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" id="NlP-BV-fbh">
+                                <rect key="frame" x="9" y="85" width="373" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you like this app?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="bVR-qe-T2B">
+                                <rect key="frame" x="43" y="170" width="307" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leave your feedback below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="WT1-gj-xH1">
+                                <rect key="frame" x="51" y="302" width="291" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Comment here" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" id="IsJ-dc-ALj">
+                                <rect key="frame" x="38" y="354" width="317" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Eb4-CI-00T">
+                                <rect key="frame" x="106" y="671" width="180" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show opinions" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.68235043989999999" green="0.74323652709999999" blue="0.60226596259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showButtonPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="LAP-8Y-tBz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Kz1-GD-AKV">
+                                <rect key="frame" x="140" y="574" width="114" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.40557850359999997" green="0.44176824819999999" blue="0.3579775342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Send" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.40557850359999997" green="0.44176824819999999" blue="0.3579775342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="htp-5v-ErS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="748" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8K0-PH-mbQ">
+                                <rect key="frame" x="106" y="221" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty_star" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="starPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="Umz-hm-AAJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tIB-pL-ov0">
+                                <rect key="frame" x="239" y="215" width="47" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty_star" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="starPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="Ymd-LY-ztQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="751" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DSP-u7-A4v">
+                                <rect key="frame" x="302" y="215" width="47" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty_star" buttonSize="mini">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="starPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="BuW-gf-xRH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fp1-nI-T09">
+                                <rect key="frame" x="170" y="215" width="50" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty_star" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="starPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="y5u-ek-sg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OCq-ud-R90">
+                                <rect key="frame" x="43" y="221" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty_star" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="starPressed:" destination="gp1-zc-gDL" eventType="touchUpInside" id="NLM-MF-GzB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TBs-Hq-yE6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Questionnaire" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="xab-3D-mJX">
+                        <color key="badgeColor" red="0.40557850359999997" green="0.44176824819999999" blue="0.3579775342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="sendButton" destination="Kz1-GD-AKV" id="scw-zS-OhD"/>
+                        <outlet property="showButton" destination="Eb4-CI-00T" id="RVN-QA-HoY"/>
+                        <outlet property="star1" destination="OCq-ud-R90" id="6aa-OQ-PHm"/>
+                        <outlet property="star2" destination="8K0-PH-mbQ" id="Skf-TY-zrW"/>
+                        <outlet property="star3" destination="fp1-nI-T09" id="9kK-EM-qaQ"/>
+                        <outlet property="star4" destination="tIB-pL-ov0" id="oPw-mc-S9b"/>
+                        <outlet property="star5" destination="DSP-u7-A4v" id="R7X-dG-dvT"/>
+                        <outlet property="textField" destination="IsJ-dc-ALj" id="qic-fX-QrC"/>
+                        <segue destination="GTC-7g-0Pw" kind="popoverPresentation" identifier="goToPopup" popoverAnchorView="Kz1-GD-AKV" id="gDA-Wd-YPP">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                        <segue destination="LvC-YU-Yqm" kind="show" identifier="goToOpinions" id="mh6-px-ZUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Gw-TU-zWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="790.25487256371821"/>
+        </scene>
+        <!--OpinionsController-->
+        <scene sceneID="lj6-o3-c23">
+            <objects>
+                <viewController title="OpinionsController" id="LvC-YU-Yqm" customClass="OpinionController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f9p-nu-HET">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZaA-5k-mBH">
+                                <rect key="frame" x="0.0" y="166" width="392" height="652"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="23" id="7pk-J6-uxL">
+                                <rect key="frame" x="10" y="81" width="372" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondaryLabelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G3t-AZ-pPH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZaA-5k-mBH" firstAttribute="bottom" secondItem="G3t-AZ-pPH" secondAttribute="bottom" id="3EG-a2-KJa"/>
+                            <constraint firstItem="ZaA-5k-mBH" firstAttribute="centerX" secondItem="7pk-J6-uxL" secondAttribute="centerX" id="6W6-bh-vCJ"/>
+                            <constraint firstItem="ZaA-5k-mBH" firstAttribute="leading" secondItem="G3t-AZ-pPH" secondAttribute="leading" id="BUG-Ik-fIj"/>
+                            <constraint firstItem="ZaA-5k-mBH" firstAttribute="top" secondItem="7pk-J6-uxL" secondAttribute="bottom" constant="8" id="oeD-Ko-GnK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="15r-Fz-81v"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZaA-5k-mBH" id="9N3-ve-xJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUW-Vx-g57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313.740458015267" y="790.84507042253529"/>
+        </scene>
+        <!--PopUpController-->
+        <scene sceneID="sNF-ov-XeG">
+            <objects>
+                <viewController title="PopUpController" modalPresentationStyle="formSheet" id="GTC-7g-0Pw" customClass="PopUpController" customModule="foodtimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8Y-4e-khi">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="450"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ijm-op-zRx">
+                                <rect key="frame" x="93" y="260" width="113" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.48993645609999997" green="0.53365345549999998" blue="0.43243476380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="OK">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.40557850359999997" green="0.44176824819999999" blue="0.3579775342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="okButtonPressed:" destination="GTC-7g-0Pw" eventType="touchUpInside" id="HFD-Xh-bkA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for your feedback!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0pc-Yb-V5o">
+                                <rect key="frame" x="6" y="105" width="287" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0uE-3Z-sId"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="450"/>
+                    <size key="freeformSize" width="300" height="450"/>
+                    <connections>
+                        <outlet property="okButton" destination="ijm-op-zRx" id="Pww-I9-eON"/>
+                        <segue destination="zNV-dG-3IP" kind="show" identifier="goToMenu" id="hcK-iu-PwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjP-bP-Yo5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2242" y="-701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_q" width="800" height="1024"/>
+        <image name="egg" width="1024" height="1024"/>
+        <image name="empty_star" width="43.333332061767578" height="43.333332061767578"/>
+        <image name="food" width="1024" height="1024"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="logo" width="1024" height="1024"/>
+        <image name="piekarnik_termoobieg" width="1024" height="1024"/>
+        <image name="piekarnik_zwykly" width="1024" height="1024"/>
+        <image name="pizza" width="1024" height="1024"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
+        <image name="tost" width="1024" height="1024"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
